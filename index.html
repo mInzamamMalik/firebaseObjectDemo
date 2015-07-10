@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-</head>
-<body>
 
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/firebase/firebase.js"></script>
+    <script src="./bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="AppController">
+
+<input type="text" ng-model="data.name" placeholder="name"/>
+<input type="text" ng-model="data.message" placeholder="message"/> <br/><br/><br/>
+
+<span>{{data.name}}: </span>
+<span>{{data.message}}</span>
+
+<br/>
+<br/>
+<input type="text" ng-model="compname" placeholder="name"/>
+<input type="text" ng-model="compmessage" placeholder="message"/>
+<button ng-click="compare();">compare</button>
 </body>
 </html>
