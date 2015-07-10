@@ -11,10 +11,14 @@
 </head>
 
 <body ng-app="app" ng-controller="AppController">
-
+<button ng-click="changefirebasedata();">change firebase data</button><br />
+<span ng-show="show">
+    <br/>
 <input type="text" ng-model="data.name" placeholder="name"/>
-<input type="text" ng-model="data.message" placeholder="message"/> <br/><br/><br/>
+<input type="text" ng-model="data.message" placeholder="message"/>
+</span>
 
+<br>
 <span>{{data.name}}: </span>
 <span>{{data.message}}</span>
 
@@ -23,5 +27,7 @@
 <input type="text" ng-model="compname" placeholder="name"/>
 <input type="text" ng-model="compmessage" placeholder="message"/>
 <button ng-click="compare();">compare</button>
+
+<p ng-bind="report"></p>
 </body>
 </html>

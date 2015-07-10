@@ -12,15 +12,20 @@ app.controller("AppController",function ($scope,$firebaseObject){
 
     $scope.compare = function(){
         if($scope.data.name == $scope.compname){
-            document.write("name matched <br />");
+            $scope.report = "name matched and"
         }else{
-            document.write("name not matched <br />")
+            $scope.report = "name not matched and"
         }
         if($scope.data.message == $scope.compmessage){
-            document.write("message matched <br />");
+            $scope.report += " message matched"
         }else{
-            document.write("message not matched <br />")
+            $scope.report += " message not matched"
         }
+    };
+
+    $scope.changefirebasedata = function(){
+
+      $scope.show = $scope.show !== true;
     }
 });
 
